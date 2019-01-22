@@ -1,0 +1,110 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  border: 10px solid rgb(192, 238, 192);
+  border-radius: 50px;
+  border-block-end: rgb(235, 57, 175);
+  border-block-end-color: blueviolet;
+  border-block-start: #d6dbd8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wrapper {
+  width: 512px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 1em;
+  border: 10px solid green;
+  border-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-block-end: #d6dbd8;
+  border-block-start: blue;
+}
+
+#instructions {
+  float: left;
+  font-family: fantasy;
+  color: wheat;
+  margin: 10px;
+}
+
+#score {
+  float: right;
+  color: wheat;
+  font-size: 2em;
+  margin: 10px;
+  font-family: fantasy;
+}
+
+.key {
+  color: wheat;
+}
+
+#title{
+  text-align: center;
+  color: wheat;
+  text-shadow: chartreuse;
+  text-decoration: underline;
+  border: 2px dashed greenyellow;
+  border-radius: 100px;
+  border-block-end: #d6dbd8;
+  border-block-start: blue;
+  font-family: fantasy;
+}
+
+.dash{
+  color: darkgreen;
+}
+
+#game-over, #game-over-overlay {
+  margin: auto;
+  width: 512px;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+}
+
+#game-over-overlay {
+  background-color: black;
+  opacity: .5;
+}
+
+#game-over {
+  height: 200px;
+  text-align: center;
+  color: wheat;
+}
+
+#game-over h1 {
+  font-size: 3em;
+  font-family: fantasy;
+}
+
+#game-over button {
+  font-size: 1.5em;
+  border: 2px solid rgb(234, 235, 232);
+  border-radius: 150px;
+  border-block-end: #d6dbd8;
+  border-block-start: #151515;
+  border-top-right-radius: 480px;
+  border-bottom-left-radius: 480px;
+}
+#play-again{
+  font-family: fantasy;
+  color: rgb(160, 14, 14);
+}
