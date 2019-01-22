@@ -292,6 +292,9 @@ function render() {
   renderEntities(explosions);
 }
 
+const blastSound = document.querySelector('#blastsound')
+   blastSound.play()
+
 function renderEntities(list) {
   for (var i = 0; i < list.length; i++) {
     renderEntity(list[i]);
@@ -311,6 +314,7 @@ function gameOver() {
   document.getElementById("game-over-overlay").style.display = "block";
   isGameOver = true;
 }
+
 
 // Reset game to original state
 function reset() {
