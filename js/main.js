@@ -48,13 +48,13 @@ function init() {
   main();
 }
 
-resources.load(["img/shooter.png", "img/bugsbg.jpeg"]);
+resources.load(["img/shooter.png", "img/bugsbg.jpeg", "img/soldier.png", "img/Explosions.png", "img/bullets.png", "img/bullets2.png", "img/bullets3.png"]);
 resources.onReady(init);
 
 // Game state
 var player = {
   pos: [0, 0],
-  sprite: new Sprite("img/shooter.png", [0, 0], [39, 39], 16, [0, 1])
+  sprite: new Sprite("img/shooter.png", [0,1], [40, 40], [0])
 };
 
 var bullets = [];
@@ -86,14 +86,7 @@ function update(dt) {
   if (Math.random() < 1 - Math.pow(0.993, gameTime)) {
     enemies.push({
       pos: [canvas.width, Math.random() * (canvas.height - 39)],
-      sprite: new Sprite("img/shooter.png", [0, 78], [80, 39], 6, [
-        0,
-        1,
-        2,
-        3,
-        2,
-        1
-      ])
+      sprite: new Sprite("img/soldier.png", [0,0], [90, 76], [0])
     });
   }
 
@@ -126,17 +119,17 @@ function handleInput(dt) {
     bullets.push({
       pos: [x, y],
       dir: "forward",
-      sprite: new Sprite("img/shooter.png", [0, 39], [18, 8])
+      sprite: new Sprite("img/bullets.png", [0,0], [30, 30], [0])
     });
     bullets.push({
       pos: [x, y],
       dir: "up",
-      sprite: new Sprite("img/shooter.png", [0, 50], [9, 5])
+      sprite: new Sprite("img/bullets3.png", [0,0], [20, 40], [0])
     });
     bullets.push({
       pos: [x, y],
       dir: "down",
-      sprite: new Sprite("img/shooter.png", [0, 60], [9, 5])
+      sprite: new Sprite("img/bullets2.png", [0,0], [20, 40], [0])
     });
 
     lastFire = Date.now();
@@ -240,7 +233,7 @@ function checkCollisions() {
         explosions.push({
           pos: pos,
           sprite: new Sprite(
-            "img/shooter.png",
+            "img/Explosions.png",
             [0, 117],
             [39, 39],
             16,
