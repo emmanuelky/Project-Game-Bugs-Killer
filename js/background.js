@@ -1,6 +1,6 @@
 
-(function() {
-  function Sprite(url, pos, size, speed, frames, dir, once) {
+class Sprite {
+  constructor(url, pos, size, speed, frames, dir, once) {
       this.pos = pos;
       this.size = size;
       this.speed = typeof speed === 'number' ? speed : 0;
@@ -11,12 +11,11 @@
       this.once = once;
   };
 
-  Sprite.prototype = {
-      update: function(dt) {
+      update(dt) {
           this._index += this.speed*dt;
-      },
+      }
 
-      render: function(ctx) {
+      render(ctx) {
           var frame;
 
           if(this.speed > 0) {
@@ -38,10 +37,10 @@
           var y = this.pos[1];
 
           if(this.dir == 'vertical') {
-              y += frame * this.size[1];
+              y += frame * this.size[0];
           }
           else {
-              x += frame * this.size[0];
+              x += frame * this.size[1];
           }
 
           ctx.drawImage(resources.get(this.url),
@@ -52,5 +51,5 @@
       }
   };
 
-  window.Sprite = Sprite;
-})();
+  window.Sprite = Sprites;
+  Sprite();

@@ -67,6 +67,8 @@ var terrainPattern;
 
 var score = 0;
 var scoreEl = document.getElementById("score");
+var blastSound = document.querySelector('#blastsound')
+   blastSound.play()
 
 // Speed in pixels per second
 var playerSpeed = 200;
@@ -85,7 +87,7 @@ function update(dt) {
   // equation: 1-.993^gameTime
   if (Math.random() < 1 - Math.pow(0.993, gameTime)) {
     enemies.push({
-      pos: [canvas.width, Math.random() * (canvas.height - 39)],
+      pos: [canvas.width, Math.random() * (canvas.height - 80)],
       sprite: new Sprite("img/soldier.png", [0,0], [90, 76], [0])
     });
   }
@@ -279,14 +281,12 @@ function render() {
   if (!isGameOver) {
     renderEntity(player);
   }
+  blastSound.play()
 
   renderEntities(bullets);
   renderEntities(enemies);
   renderEntities(explosions);
 }
-
-const blastSound = document.querySelector('#blastsound')
-   blastSound.play()
 
 function renderEntities(list) {
   for (var i = 0; i < list.length; i++) {
