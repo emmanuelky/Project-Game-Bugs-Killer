@@ -1,5 +1,4 @@
-// A cross-browser requestAnimationFrame
-// See https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/
+//requestAnimationFrame
 var requestAnimFrame = (function() {
   return (
     window.requestAnimationFrame ||
@@ -13,14 +12,14 @@ var requestAnimFrame = (function() {
   );
 })();
 
-// Create the canvas
+// Creating the canvas
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 474;
 document.body.appendChild(canvas);
 
-// The main game loop
+// The game loop
 var lastTime;
 function main() {
   var now = Date.now();
@@ -51,10 +50,10 @@ function init() {
 resources.load(["img/shooter.png", "img/bugsbg.jpeg", "img/soldier.png", "img/Explosions.png", "img/bullets.png", "img/bullets2.png", "img/bullets3.png"]);
 resources.onReady(init);
 
-// Game state
+// State of Game
 var player = {
   pos: [0, 0],
-  sprite: new Sprite("img/shooter.png", [0,1], [40, 40], [0])
+  sprite: new Sprite("img/shooter.png", [0,1], [40, 50], [0])
 };
 
 var bullets = [];
@@ -74,14 +73,15 @@ var playerSpeed = 200;
 var bulletSpeed = 500;
 var enemySpeed = 100;
 
-// Update game objects
+// Updating game objects
 function update(dt) {
   gameTime += dt;
 
   handleInput(dt);
   updateEntities(dt);
 
-  // It gets harder over time by adding enemies using this
+  // Game Levels Control
+  //It gets harder over time by adding enemies using this
   // equation: 1-.993^gameTime
   if (Math.random() < 1 - Math.pow(0.993, gameTime)) {
     enemies.push({
