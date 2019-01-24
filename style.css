@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #151515;
+  background-image: url(/img/body.jpeg)
 }
 
 canvas {
@@ -34,25 +34,25 @@ canvas {
 #instructions {
   float: left;
   font-family: fantasy;
-  color: wheat;
+  color: chartreuse;
   margin: 10px;
 }
 
 #score {
   float: right;
-  color: wheat;
+  color: chartreuse;
   font-size: 2em;
   margin: 10px;
   font-family: fantasy;
 }
 
 .key {
-  color: wheat;
+  color: whitesmoke;
 }
 
 #title{
   text-align: center;
-  color: wheat;
+  color: rgb(228, 241, 215);
   text-shadow: chartreuse;
   text-decoration: underline;
   border: 2px dashed greenyellow;

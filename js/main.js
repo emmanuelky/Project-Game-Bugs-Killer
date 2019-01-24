@@ -179,17 +179,6 @@ function updateEntities(dt) {
       i--;
     }
   }
-
-  // Update all the explosions
-  for (var i = 0; i < explosions.length; i++) {
-    explosions[i].sprite.update(dt);
-
-    // Remove if animation is done
-    if (explosions[i].sprite.done) {
-      explosions.splice(i, 1);
-      i--;
-    }
-  }
 }
 
 // Collisions
@@ -230,20 +219,6 @@ function checkCollisions() {
 
         // Add score
         score += 100;
-
-        // Add an explosion
-        explosions.push({
-          pos: pos,
-          sprite: new Sprite(
-            "img/Explosions.png",
-            [0, 117],
-            [39, 39],
-            16,
-            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-            null,
-            true
-          )
-        });
 
         // Remove the bullet and stop this iteration
         bullets.splice(j, 1);
