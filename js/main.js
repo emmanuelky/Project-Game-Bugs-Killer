@@ -47,7 +47,7 @@ function init() {
   main();
 }
 
-resources.load(["img/shooter.png", "img/bugsbg.jpeg", "img/soldier.png", "img/Explosions.png", "img/bullets.png", "img/bullets2.png", "img/bullets3.png"]);
+resources.load(["img/shooter.png", "img/bugsbg.jpeg", "img/soldier.png", "img/Explosions.png", "img/bullets.png", "img/bullets2.png", "img/bullets3.png", "img/body.jpeg"]);
 resources.onReady(init);
 
 // State of Game
