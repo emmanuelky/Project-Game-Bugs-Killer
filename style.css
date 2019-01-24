@@ -1,7 +1,8 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background-image: url("/img/body.jpeg");
+  background-image: url("img/body.jpeg");
 }
 
 canvas {
@@ -50,7 +51,7 @@ canvas {
   color: whitesmoke;
 }
 
-#title{
+#title {
   text-align: center;
   color: rgb(228, 241, 215);
   text-shadow: chartreuse;
@@ -62,11 +63,12 @@ canvas {
   font-family: fantasy;
 }
 
-.dash{
+.dash {
   color: darkgreen;
 }
 
-#game-over, #game-over-overlay {
+#game-over,
+#game-over-overlay {
   margin: auto;
   width: 512px;
   height: 480px;
@@ -81,7 +83,7 @@ canvas {
 
 #game-over-overlay {
   background-color: black;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #game-over {
@@ -104,7 +106,7 @@ canvas {
   border-top-right-radius: 480px;
   border-bottom-left-radius: 480px;
 }
-#play-again{
+#play-again {
   font-family: fantasy;
   color: rgb(160, 14, 14);
 }
