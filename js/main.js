@@ -73,7 +73,7 @@ var blastSound = document.querySelector('#blastsound')
 // Speed in pixels per second
 var playerSpeed = 200;
 var bulletSpeed = 500;
-var enemySpeed = 100;
+var enemySpeed = 550;
 
 // Updating game objects
 function update(dt) {
